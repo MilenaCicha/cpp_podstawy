@@ -1,0 +1,1 @@
+W tym folderze umieszczone zosta³y proste programy i pojedyncze obliczenia wykonane w C++.
