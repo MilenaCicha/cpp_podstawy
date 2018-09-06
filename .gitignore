@@ -1,0 +1,5 @@
+cmake-build-debug/
+CMakeLists.txt
+*.idea
+if_else.cpp
+second_day.cpp
