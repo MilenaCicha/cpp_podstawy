@@ -1,24 +1,28 @@
 #include <iostream>
+#include <cmath>
 
-bool czySumaKwadratow(int liczba){
-    for (int i = 1; i*i <= liczba; ++i){
-        for (int j =1; j*j <= liczba; ++j){
-            if(i*i + j*j == liczba){
-                std::cout<<"("<<i<<"*"<<i<<") + ("<<j<<"*"<<j<<") = "<<liczba<<std::endl;
+bool czySumaKwadratow(int liczba) {
+    for(int i=1; i*i <= liczba; ++i) {
+        for (int j = i; j * j <= liczba; ++j) {
+            if (pow(i, 2) + pow(j, 2) == liczba) {
+                std::cout << "(" << i << "*" << i << ") + (" << j << "*" << j << ") = " << liczba << std::endl;
                 return true;
             }
-            else
-                return false;
+
 
         }
+
     }
+    std::cout<<"Liczba nie posiada rozkladow ktorych zsumowane potegi zwroca podana liczbe\n";
+    return false;
 
 
+}
 
 
 
     int main(){
-        int liczba{};
+        int liczba;
         std::cout<<"Podaj liczbe dla ktorej chcesz sprawdzic mozliwe rozklady na sumy dwoch kwadratow.\n ";
         std::cin>>liczba;
 
@@ -26,3 +30,5 @@ bool czySumaKwadratow(int liczba){
 
 
     }
+
+
