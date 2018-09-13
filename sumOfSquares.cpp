@@ -7,9 +7,9 @@ bool czySumaKwadratow(int liczba){
                 std::cout<<"("<<i<<"*"<<i<<") + ("<<j<<"*"<<j<<") = "<<liczba<<std::endl;
                 return true;
             }
-            else{
+            else
                 return false;
-            }
+
         }
     }
 
@@ -17,12 +17,12 @@ bool czySumaKwadratow(int liczba){
 
 
 
-int main(){
-    int liczba{};
-    std::cout<<"Podaj liczbe dla ktorej chcesz sprawdzic mozliwe rozklady na sumy dwoch kwadratow.\n ";
-    std::cin>>liczba;
+    int main(){
+        int liczba{};
+        std::cout<<"Podaj liczbe dla ktorej chcesz sprawdzic mozliwe rozklady na sumy dwoch kwadratow.\n ";
+        std::cin>>liczba;
 
-    czySumaKwadratow(liczba);
+        czySumaKwadratow(liczba);
 
 
-}
+    }
