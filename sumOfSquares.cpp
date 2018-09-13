@@ -4,7 +4,7 @@
 bool czySumaKwadratow(int liczba) {
     for(int i=1; i*i <= liczba; ++i) {
         for (int j = i; j * j <= liczba; ++j) {
-            if (pow(i, 2) + pow(j, 2) == liczba) {
+            if (i*i + j*j == liczba) {
                 std::cout << "(" << i << "*" << i << ") + (" << j << "*" << j << ") = " << liczba << std::endl;
                 return true;
             }
