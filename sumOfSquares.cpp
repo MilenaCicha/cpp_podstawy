@@ -2,19 +2,25 @@
 #include <cmath>
 
 bool czySumaKwadratow(int liczba) {
-    for(int i=1; i*i <= liczba; ++i) {
-        for (int j = i; j * j <= liczba; ++j) {
+
+    bool sumaKwadratowZnaleziona = false;
+    for(int i=1; i<sqrt(liczba); ++i) {
+        for (int j = 1; j<sqrt(liczba); ++j) {
             if (i*i + j*j == liczba) {
                 std::cout << "(" << i << "*" << i << ") + (" << j << "*" << j << ") = " << liczba << std::endl;
-                return true;
+                sumaKwadratowZnaleziona = true;
+
             }
 
 
         }
 
     }
-    std::cout<<"Liczba nie posiada rozkladow ktorych zsumowane potegi zwroca podana liczbe\n";
-    return false;
+    if (sumaKwadratowZnaleziona == false) {
+        std::cout << "Liczba nie posiada rozkladow ktorych zsumowane potegi zwroca podana liczbe\n";
+
+    }
+    return sumaKwadratowZnaleziona;
 
 
 }
