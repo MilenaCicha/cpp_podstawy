@@ -9,16 +9,16 @@ void math(std::string entry,std::size_t equation){
     int num1 = stoi(entry.substr(equation2+1,1));
     int num2 = stoi(entry.substr(equation2+3,1));
     int result = stoi(entry.substr(equation2+5));
-    std::string sign = entry.substr(equation2+2,1);
+    char sign = entry[equation2+2];
 
-    if(sign == "+"){
+    if(sign == '+'){
 
         int solution = num1 + num2;
         if(solution == result){
             std::cout<<"Gratulacje, prawidlowe rownanie.\n";
         }else
             std::cout<<"Prawidlowe rownanie to: "<<num1<<" + "<<num2<<" = "<<solution<<std::endl;
-    }else if(sign == "-"){
+    }else if(sign == '-'){
         int solution1 = num1 - num2;
         if(solution1 == result){
             std::cout<<"Gratulacje. Prawidlowe dzialanie.\n";
