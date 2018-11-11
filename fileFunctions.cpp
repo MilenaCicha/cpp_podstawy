@@ -27,7 +27,7 @@ void printWhatsInADir(){
     }
 }
 
-void writeInAFile(const& std::string filename){
+void writeInAFile(std::string filename){
     std::ofstream file(filename,std::ios::out | std::ios::app);
     std::string text;
     if(file.is_open()){
@@ -42,7 +42,7 @@ void writeInAFile(const& std::string filename){
     }
 }
 
-void readAFile(const& std::string filename){
+void readAFile(const std::string& filename){
 
     std::ifstream file(filename);
     if(!file.is_open()){
@@ -57,7 +57,7 @@ void readAFile(const& std::string filename){
     file.close();
 }
 
-void removeAFile(const& std::string filename){
+void removeAFile(std::string filename){
     if(std::remove(filename.c_str()) != 0){
         std::cout<<"Couldn't remove this file."<<std::endl;
     }
@@ -66,7 +66,7 @@ void removeAFile(const& std::string filename){
     }
 }
 
-void readSpecificValues(const& std::string filename){
+void readSpecificValues(const std::string& filename){
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cout << "couldn't open the file" << std::endl;
